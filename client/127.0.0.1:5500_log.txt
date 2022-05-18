@@ -1,0 +1,59 @@
+Peer Address : 127.0.0.1:5500
+Tracker 1 Address : 127.0.0.1:5000
+Tracker 2 Address : 127.0.0.1:6000
+Log file name : 127.0.0.1:5500_log.txt
+
+Peer socket created
+connected to server 5000
+
+5500 will start running as server
+ Server socket created.
+ Binding completed.
+Listening...
+
+sent to server: create_user
+primary server response: Account created
+sent to server: login
+primary server response: Login Successful
+sent to server: create_group
+primary server response: Group created
+sent to server: upload_file
+primary server response: Error 101:
+sent to server: help
+primary server response: Invalid command
+sent to server: upload_file
+primary server response: Uploading...
+sending file details for upload: /mnt/d/text.txt$$127.0.0.1:5500$$1167$$b41df020c79c2dae02e94adee20a4786de92372098a8b39ce1d53dcef88ec7ab$$7999baf670dbfd9d133d08d4ba5755e18fff333d
+server reply for send file: Uploaded
+sent to server: help
+primary server response: Invalid command
+sent to server: accept_request
+primary server response: Accepting request...
+ Connection Accepted
+
+client socket num: 5
+
+client request at server get_chunk_vector$$text.txt
+get_chunk_vector
+
+sending chunk vector..
+sent: 11
+ Connection Accepted
+
+client socket num: 6
+
+client request at server get_chunk$$text.txt$$0$$/mnt/d/education/text.txt
+get_chunk
+
+sending chunk...
+filepath: /mnt/d/text.txt
+sending 0 from 127.0.0.1:5500
+sending data starting at 0
+sent till -1
+ Connection Accepted
+
+client socket num: 5
+
+client request at server get_file_path$$text.txt
+get_file_path
+command from peer client: get_file_path$$text.txt

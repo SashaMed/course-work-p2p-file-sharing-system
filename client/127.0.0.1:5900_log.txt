@@ -1,0 +1,65 @@
+Peer Address : 127.0.0.1:5900
+Tracker 1 Address : 127.0.0.1:5000
+Tracker 2 Address : 127.0.0.1:6000
+Log file name : 127.0.0.1:5900_log.txt
+
+Peer socket created
+
+5900 will start running as server
+connected to server 5000
+ Server socket created.
+ Binding completed.
+Listening...
+
+sent to server: create_user
+primary server response: Account created
+sent to server: login
+primary server response: Login Successful
+sent to server: join_group
+primary server response: Group request sent
+sent to server: list_files
+primary server response: Invalid argument count
+sent to server: list_files
+primary server response: Fetching files...
+sent to server: download_file
+primary server response: Downloading..
+sending file details for download : text.txt$$/mnt/d/education$$444
+Started piecewise algo
+Getting chunk info of : text.txt from 127.0.0.1:5500
+
+Inside connectToPeer
+Socket Created
+
+ needs to connect to 127.0.0.1:5500
+Connected to peer 127.0.0.1:5500
+current command get_chunk_vector
+sent command to peer: get_chunk_vector$$text.txt
+got reply: 11
+filled in default values to file
+getting segment no: 0
+randompiece = 0
+starting thread for chunk number 0
+Chunk fetching details :text.txt 127.0.0.1:5500 0
+
+Inside connectToPeer
+Socket Created
+
+ needs to connect to 127.0.0.1:5500
+Connected to peer 127.0.0.1:5500
+current command get_chunk
+sent command to peer: get_chunk$$text.txt$$0$$/mnt/d/education/text.txt
+
+getting chunk 0 from 5500
+written at: 0
+written till: 1165
+
+chunk vector updated for text.txt at 0
+
+Inside connectToPeer
+Socket Created
+
+ needs to connect to 127.0.0.1:5500
+Connected to peer 127.0.0.1:5500
+current command get_file_path
+server reply for get file path:/mnt/d/text.txt
+terminating connection with 127.0.0.1:5500

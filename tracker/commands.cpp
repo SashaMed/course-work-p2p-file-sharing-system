@@ -45,9 +45,9 @@ void uploadFile(vector<string> inpt, int client_socket, string client_uid){
     else if(groupMembers[inpt[2]].find(client_uid) == groupMembers[inpt[2]].end()){
         write(client_socket, "Error 102:", 10);
     }
-    else if(!pathExists(inpt[1])){
-        write(client_socket, "Error 103:", 10);
-    }
+    // else if(!pathExists(inpt[1])){
+    //     write(client_socket, "Error 103:", 10);
+    // }
     else{
         char fileDetails[524288] =  {0};
         write(client_socket, "Uploading...", 12);
@@ -91,10 +91,10 @@ void downloadFile(vector<string> inpt, int client_socket, string client_uid){
         write(client_socket, "Error 102:", 10);
     }
     else{
-        if(!pathExists(inpt[3])){
-            write(client_socket, "Error 103:", 10);
-            return;
-        }
+        // if(!pathExists(inpt[3])){
+        //     write(client_socket, "Error 103:", 10);
+        //     return;
+        // }
 
         char fileDetails[524288] =  {0};
         // fileDetails = [filename, destination, group id]
