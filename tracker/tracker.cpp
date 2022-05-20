@@ -1,7 +1,6 @@
 #include "tracker_header.h"
 
-string logFileName, tracker1_ip, tracker2_ip, curTrackerIP,
-            seederFileName;
+string logFileName, tracker1_ip, tracker2_ip, curTrackerIP;
 uint16_t tracker1_port, tracker2_port, curTrackerPort;
 unordered_map<string, string> loginCreds;
 unordered_map<string, bool> isLoggedIn;

@@ -17,16 +17,16 @@ using namespace std;
 #define SA struct sockaddr 
 #define ll long long int
 
-extern string logFileName, tracker1_ip, tracker2_ip, peer_ip, seederFileName;
+extern string logFileName, tracker1_ip, tracker2_ip, peer_ip;
 extern uint16_t peer_port, tracker1_port, tracker2_port;
-extern unordered_map<string, string> downloadedFiles;
-extern bool loggedIn;
+extern unordered_map<string, string> downloadedFiles; //загруженные файлы, айди группы и файлы
+extern bool loggedIn; 
 extern bool isCorruptedFile;
-extern unordered_map<string, unordered_map<string, bool>> isUploaded; // group -> filename -> bool
+extern unordered_map<string, unordered_map<string, bool>> isUploaded; //список загрузок айди группы, имя файла и флаг загрузки 
 extern unordered_map<string, vector<int>> fileChunkInfo;
 extern vector<vector<string>> curDownFileChunks;
-extern unordered_map<string, string> fileToFilePath;
-extern vector<string> curFilePiecewiseHash;
+extern unordered_map<string, string> fileToFilePath; //список файлов с путями к ним
+extern vector<string> curFilePiecewiseHash; //
 
 string getHash(char*);
 string getFileHash(char*);

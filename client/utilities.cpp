@@ -7,20 +7,22 @@ bool pathExists(const string &s){
 
 void printHelp()
 {
-    cout << "create_user​ <user_id> <password>" << endl;
-    cout << "login​ <user_id> <password>" << endl;
-    cout << "logout" << endl;
-    cout << "list_groups" << endl;
-    cout << "create_group ​<group_id>" << endl;
-    cout << "join_group​ <group_id>" << endl;
-    cout << "leave_group​ <group_id>" << endl;
-    cout << "list_requests ​<group_id>" << endl;
-    cout << "accept_request​ <group_id> <user_id>" << endl;
-    cout << "list_files ​<group_id>" << endl;
-    cout << "upload_file​ <file_path> <group_id​>" << endl;
-    cout << "download_file ​<group_id> <file_name> <destination_path>" << endl;
-    cout << "show_downloads" << endl;
-    cout << "top_share ​<group_id> <file_name>" << endl;
+    cout << "LIST OF COMMANDS:" << endl;
+    cout <<  "    create_user   <user_id>   <password>" << endl;
+    cout <<  "          login   <user_id>   <password>" << endl;
+    cout <<  "         logout" << endl;
+    cout <<  "    list_groups" << endl;
+    cout <<  "   create_group   <group_id>" << endl;
+    cout <<  "     join_group​  <group_id>" << endl;
+    cout <<  "    leave_group​  <group_id>" << endl;
+    cout <<  "  list_requests  ​<group_id>" << endl;
+    cout <<  " accept_request​  <group_id>   <user_id>" << endl;
+    cout <<  "     list_files ​ <group_id>" << endl;
+    cout <<  "    upload_file​  <file_path>  <group_id​>" << endl;
+    cout <<  "  download_file  ​<group_id>   <file_name>  <destination_path>" << endl;
+    cout <<  " show_downloads" << endl;
+    cout <<  "      top_share  ​<group_id>   <file_name>" << endl;
+    cout <<  "           quit" << endl << endl;
         return;
 }
 

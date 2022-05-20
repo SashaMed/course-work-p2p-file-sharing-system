@@ -25,18 +25,18 @@ using namespace std;
 #define MAXLINE 4096 
 #define SA struct sockaddr 
 
-extern string logFileName, tracker1_ip, tracker2_ip, curTrackerIP, seederFileName;
+extern string logFileName, tracker1_ip, tracker2_ip, curTrackerIP;
 extern uint16_t tracker1_port, tracker2_port, curTrackerPort;
-extern unordered_map<string, string> loginCreds;
-extern unordered_map<string, bool> isLoggedIn;
-extern unordered_map<string, unordered_map<string, set<string>>> seederList; // groupid -> {map of filenames -> peer address}
-extern unordered_map<string, string> fileSize;
-extern unordered_map<string, string> grpAdmins;
-extern vector<string> allGroups;
-extern unordered_map<string, set<string>> groupMembers;
-extern unordered_map<string, set<string>> grpPendngRequests;
-extern unordered_map<string, string> unameToPort;
-extern unordered_map<string, string> piecewiseHash; 
+extern unordered_map<string, string> loginCreds; //cписок пользователей
+extern unordered_map<string, bool> isLoggedIn; //список активных в данных момент пользователей
+extern unordered_map<string, unordered_map<string, set<string>>> seederList; // групп айди и список файлов в группе со списком сидов
+extern unordered_map<string, string> fileSize;//размер каждого файла
+extern unordered_map<string, string> grpAdmins; //список админов
+extern vector<string> allGroups;  //список всех групп
+extern unordered_map<string, set<string>> groupMembers;  //список групп и их пользователей
+extern unordered_map<string, set<string>> grpPendngRequests; //список запросов в группу
+extern unordered_map<string, string> unameToPort; //айпи и порт юзер айдишников
+extern unordered_map<string, string> piecewiseHash;  //хеш к каждому файлу
 
 void handle_connection(int);
 void list_files(vector<string>, int);

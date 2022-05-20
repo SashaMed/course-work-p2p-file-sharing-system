@@ -1,6 +1,6 @@
 #include "client_header.h"
 
-string logFileName, tracker1_ip, tracker2_ip, peer_ip, seederFileName;
+string logFileName, tracker1_ip, tracker2_ip, peer_ip;
 uint16_t peer_port, tracker1_port, tracker2_port;
 bool loggedIn;
 unordered_map<string, unordered_map<string, bool>> isUploaded; // group -> filename -> bool
@@ -37,6 +37,7 @@ int main(int argc, char* argv[]){
     }
 
     if(connectToTracker(1, serv_addr, sock) < 0){
+        cout << "Can not connect to tracker" << endl;
         exit(-1); 
     }
 
@@ -52,9 +53,15 @@ int main(int argc, char* argv[]){
         while(ss >> s){
             inpt.push_back(s);
         } 
+
+        if(inpt[0] == "quit"){
+            exit(0);
+        }
+
         if (inpt[0] == "help")
         {
             printHelp();
+            continue;
         }
 
         if(inpt[0] == "login" && loggedIn){
